@@ -27,7 +27,9 @@ object NpmHooks {
     val packageJsonPath = frontendBase / "package.json"
 
     //Locally stored file hash of package.json
-    val packageJsonHashPath = frontendBase / "target"/ "package.json.hash"
+    val frontEndTarget = frontendBase / "target"
+    val packageJsonHashPath = frontEndTarget / "package.json.hash"
+
 
     object NpmBuildHook extends PlayRunHook {
 
@@ -91,11 +93,27 @@ object NpmHooks {
 
       def updateStoredPackageJsonHash(hash: String) = {
 
+
+        val dir = frontEndTarget;
+
+        if(!dir.exists){
+          dir.mkdirs
+        }
+
         val pw = new PrintWriter(packageJsonHashPath)
 
-        pw.write(hash)
+        try{
 
-        pw.close()
+          pw.write(hash)
+
+        }
+        finally{
+
+          pw.close()
+
+        }
+
+
 
       }
 
