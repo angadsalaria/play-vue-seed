@@ -41,3 +41,5 @@ The production build creates the html, js, css and all other front-end artifacts
 
 I have retained a Twirl served page in this app, exposed under `/playApp` route in the app context. However, the intent of this seed app is to provide a template for setting up a completely decoupled web stack wherein Play is used simply to serve an API to front-end.
  
+ ## License
+ Apache License 2.0
