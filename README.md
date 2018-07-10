@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-# play-vue
+# play-vue-seed
 Scala starter app with Play, Vue CLI 3
 
 This app combines a [Play starter app](https://www.playframework.com/documentation/2.6.x/NewApplication) and a [vue-cli-3](https://cli.vuejs.org/guide/creating-a-project.html#installation) based front-end app.
@@ -17,11 +17,17 @@ Play [RunHooks](https://www.playframework.com/documentation/2.6.x/SBTCookbook) a
 
 The hook generates and stores locally a hash of `package.json` to detect changes to it and runs `npm install` when required.
 
+Additionally, the hook invokes `npm serve` to spin up a webpack dev server to serve front-end artifacts over port 8080.
+
+The play app is started up on port 9000.
+
 ## Production Build
 
-Notice that the Vue app is missing the traditional `webpack.config.js`. And instead we see a `vue.config.js`.  This is because Vue CLI 3 abstracts this out and comes with a bare-bones webpack setup out of the box.
-This does not mean though that we cannot add to the webpack config. This can be done by providing webpack config as part of `configureWebpack` object in `vue.config.js`. 
-This template keeps all the additional webpack config in a separate file called `vue.webpack.config.js` and imports it in `vue.config.js`.
+Notice that the Vue app is missing the traditional `webpack.config.js`. And instead we see a `vue.config.js`.  This is because Vue CLI 3 abstracts out the webpack config and comes with a bare-bones webpack setup out of the box.
+
+This does not mean though that we cannot add to the webpack config. It can be done by providing webpack config as part of `configureWebpack` object in `vue.config.js`. 
+
+In this app template, we keep all the additional webpack config in a separate file called `vue.webpack.config.js` and import it in `vue.config.js`.
 
 To invoke the prod build, simply issue below sbt command:
 > sbt dist
@@ -37,6 +43,5 @@ The production build creates the html, js, css and all other front-end artifacts
 
 I have retained a Twirl served page in this app, exposed under `/playApp` route in the app context. However, the intent of this seed app is to provide a template for setting up a completely decoupled web stack wherein Play is used simply to serve an API to front-end.
  
-## License
-
-This software is licensed under the Apache license
+ ## License
+[Apache License 2.0](https://github.com/angadsalaria/play-vue-seed/blob/master/LICENSE)
