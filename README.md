@@ -16,7 +16,9 @@ Clone the Git Repo & open the terminal in the root dir of the app.
 Play [RunHooks](https://www.playframework.com/documentation/2.6.x/SBTCookbook) are in place to run the npm commands as part of the `sbt run` command. 
 
 The hook generates and stores locally a hash of `package.json` to detect changes to it and runs `npm install` when required.
+
 Additionally, the hook invokes `npm serve` to spin up a webpack dev server to serve front-end artifacts over port 8080.
+
 The play app is started up on port 9000.
 
 ## Production Build
