@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-# play-vue
+# play-vue-seed
 Scala starter app with Play, Vue CLI 3
 
 This app combines a [Play starter app](https://www.playframework.com/documentation/2.6.x/NewApplication) and a [vue-cli-3](https://cli.vuejs.org/guide/creating-a-project.html#installation) based front-end app.
