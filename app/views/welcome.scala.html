@@ -1,0 +1,30 @@
+@(message: String, style: String = "scala")
+
+  @defining(play.core.PlayVersion.current) { version =>
+
+    <section id="top">
+      <div class="wrapper">
+        <h1>@message</h1>
+
+      </div>
+    </section>
+
+    <div id="content" class="wrapper doc">
+
+      <br>
+      <article>
+      <h1>Play App</h1>
+        <p>
+        This is Play template rendered Page using Play's Twirl Templating Engine.
+        </p>
+        Play <a href="https://playframework.com/documentation/@version/Home">Documentation</a>
+      <hr>
+
+      <h1>Vue App</h1>
+        <p>
+        Visit Vue.js <a href="index.html">app</a>.
+        </p>
+
+      </article>
+    </div>
+  }
