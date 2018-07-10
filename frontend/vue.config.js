@@ -14,6 +14,11 @@ module.exports = {
       })
   },
 
-  outputDir: '../public'
+  outputDir: '../public',
+
+  devServer: {
+    port: 8080,
+    open: true
+  }
 
 }
