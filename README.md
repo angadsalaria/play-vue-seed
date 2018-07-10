@@ -19,9 +19,11 @@ The hook generates and stores locally a hash of `package.json` to detect changes
 
 ## Production Build
 
-Notice that the Vue app is missing the traditional `webpack.config.js`. And instead we see a `vue.config.js`.  This is because Vue CLI 3 abstracts this out and comes with a bare-bones webpack setup out of the box.
-This does not mean though that we cannot add to the webpack config. This can be done by providing webpack config as part of `configureWebpack` object in `vue.config.js`. 
-This template keeps all the additional webpack config in a separate file called `vue.webpack.config.js` and imports it in `vue.config.js`.
+Notice that the Vue app is missing the traditional `webpack.config.js`. And instead we see a `vue.config.js`.  This is because Vue CLI 3 abstracts out the webpack config and comes with a bare-bones webpack setup out of the box.
+
+This does not mean though that we cannot add to the webpack config. It can be done by providing webpack config as part of `configureWebpack` object in `vue.config.js`. 
+
+In this app template, we keep all the additional webpack config in a separate file called `vue.webpack.config.js` and import it in `vue.config.js`.
 
 To invoke the prod build, simply issue below sbt command:
 > sbt dist
