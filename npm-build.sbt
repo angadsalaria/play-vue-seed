@@ -26,4 +26,5 @@ lazy val `frontend-prod-build` = TaskKey[Unit]("Prod build for front-end artifac
 
 // Execute frontend prod build task prior to play dist/stage execution.
 dist := (dist dependsOn `frontend-prod-build`).value
-stage := (stage dependsOn `frontend-prod-build`).value
+
+
