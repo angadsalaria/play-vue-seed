@@ -32,7 +32,7 @@ In this app template, we keep all the additional webpack config in a separate fi
 To invoke the prod build, simply issue below sbt command:
 > sbt dist
 
-Utilizing the sbt config as setup in `npm-build.sbt`, this resolves to same as below,
+In addition to regular `sbt dist` routine, the config as setup in `npm-build.sbt` additionally issues below npm commands as a dependency to the task:
 > npm install
 
 > npm build
