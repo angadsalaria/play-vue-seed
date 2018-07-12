@@ -13,7 +13,7 @@ Clone the Git Repo & open the terminal in the root dir of the app.
 
 > sbt run
 
-Play [RunHooks](https://www.playframework.com/documentation/2.6.x/SBTCookbook) are in place to run the npm commands as part of the `sbt run` command. 
+Play [RunHooks](https://www.playframework.com/documentation/2.6.x/SBTCookbook) are in place to run various npm commands required to startup the frontend Dev server as part of `sbt run`. 
 
 The hook generates and stores locally a hash of `package.json` to detect changes to it and runs `npm install` when required.
 
