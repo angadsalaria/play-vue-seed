@@ -32,6 +32,12 @@ class IndexController @Inject()(assets: Assets, cc: ControllerComponents) extend
 
   }
 
+  def todo: Action[AnyContent] = {
+
+    assets.at("/public", "todo.html")
+
+  }
+
 
   def serveRootJsFiles(file: String): Action[AnyContent] = {
 

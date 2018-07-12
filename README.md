@@ -3,7 +3,7 @@
 # play-vue-seed
 Scala starter app with Play, Vue CLI 3
 
-This app combines a [Play starter app](https://www.playframework.com/documentation/2.6.x/NewApplication) and a [vue-cli-3](https://cli.vuejs.org/guide/creating-a-project.html#installation) based front-end app.
+This is a multi-page web application that combines [Play starter app](https://www.playframework.com/documentation/2.6.x/NewApplication) and [vue-cli-3](https://cli.vuejs.org/guide/creating-a-project.html#installation) based front-end app.
 
 The Vue app is placed under `/frontend` folder and the prod build places the front-end artifacts under /public folder, which is picked up by Play app to serve the artifacts.
 
@@ -38,6 +38,24 @@ Utilizing the sbt config as setup in `npm-build.sbt`, this resolves to same as b
 > npm build
 
 The production build creates the html, js, css and all other front-end artifacts and places it in `/public` folder.
+
+## Multi-Page 
+Multiple pages are configured using the [pages](https://cli.vuejs.org/config/#pages) configuration provided by Vue CLI. 
+See `vue.config.js` for inspecting config in this project.
+
+This app is configured with 2 pages and can be found in below folder structure:
+```
+src/
+    /pages
+      /app
+        <!-- JS, Vue & CSS files -->
+      /todo
+        <!-- JS, Vue & CSS files -->
+``` 
+1) app -> The default Vue app that comes with a vue-cli starter project
+2) todo -> A todo app [taken from Vue examples](http://todomvc.com/examples/vue/) and converted into an SFC Vue app)
+
+Upon invoking a production build, 2 separate html files get created in `/public` folder (index.html, todo.html) and can be readily served by Play Controllers.
 
 ## Templating Engine?
 

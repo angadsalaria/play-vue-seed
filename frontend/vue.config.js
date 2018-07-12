@@ -5,14 +5,19 @@ module.exports = {
   // Merged into the final Webpack config
   configureWebpack: webpack.config,
 
-  chainWebpack: config => {
-    config
-      .plugin('html')
-      .tap(args => {
-        args[0].template = './static/index.html'
-        return args
-      })
+  pages: {
+    index: {
+      entry: 'src/pages/app/main.js',
+      template: 'static/index.html',
+      filename: 'index.html'
+    },
+    todo: {
+      entry: 'src/pages/todo/main.js',
+      template: 'static/index.html',
+      filename: 'todo.html'
+    }
   },
+
 
   outputDir: '../public',
 
