@@ -23,7 +23,7 @@ The play app is started up on port 9000.
 
 ## Production Build
 
-Notice that the Vue app is missing the traditional `webpack.config.js`. And instead we see a `vue.config.js`.  This is because Vue CLI 3 abstracts out the webpack config and comes with a bare-bones webpack setup out of the box.
+Notice that the Vue app is missing the traditional `webpack.config.js`. And instead we see a `vue.config.js`.  Vue CLI 3 abstracts out the webpack config and comes with a bare-bones webpack setup out of the box.
 
 This does not mean though that we cannot add to the webpack config. It can be done by providing webpack config as part of `configureWebpack` object in `vue.config.js`. 
 
