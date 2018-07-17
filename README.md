@@ -45,12 +45,13 @@ See `vue.config.js` for inspecting config in this project.
 
 This app is configured with 2 pages and can be found in below folder structure:
 ```
-src/
-    /pages
-      /app
-        <!-- JS, Vue & CSS files -->
-      /todo
-        <!-- JS, Vue & CSS files -->
+frontend/
+    src/
+      /pages
+        /app
+          <!-- JS, Vue & CSS files -->
+        /todo
+          <!-- JS, Vue & CSS files -->
 ``` 
 1) app -> The default Vue app that comes with a vue-cli starter project
 2) todo -> A todo app taken from [Vue examples](http://todomvc.com/examples/vue/) and converted into an SFC Vue app)
