@@ -18,7 +18,6 @@ module.exports = {
     }
   },
 
-
   outputDir: '../public',
 
   devServer: {

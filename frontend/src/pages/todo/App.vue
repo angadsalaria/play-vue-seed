@@ -56,8 +56,6 @@
   </div>
 </template>
 
-
-
 <style>
 @import './todo.css';
 </style>
