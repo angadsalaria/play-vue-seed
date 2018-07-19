@@ -13,7 +13,8 @@ scalaVersion := "2.11.7"
 
 libraryDependencies ++= Seq( specs2 % Test , guice,
   "io.kamon" %% "kamon-play-2.6" % "1.1.0",
-  "io.kamon" %% "kamon-core" % "1.1.0"
+  "io.kamon" %% "kamon-core" % "1.1.0",
+  "io.kamon" %% "kamon-prometheus" % "1.0.0"
 )
 
 
