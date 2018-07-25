@@ -54,7 +54,7 @@ frontend/
           <!-- JS, Vue & CSS files -->
 ``` 
 1) app -> The default Vue app that comes with a vue-cli starter project
-2) todo -> A todo app taken from [Vue examples](http://todomvc.com/examples/vue/) and converted into an SFC Vue app)
+2) todo -> A todo app taken from [Vue examples](http://todomvc.com/examples/vue/) and converted into an SFC Vue app
 
 Upon invoking a production build, 2 separate html files get created in `/public` folder (`index.html`, `todo.html`) and can be readily served by Play Controllers.
 
